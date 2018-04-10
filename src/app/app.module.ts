@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule, MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA }      from '@angular/core';
-import { HttpErrorResponse } from '@angular/common/http';
+import {enableProdMode} from '@angular/core';
 
 import { BookService } from './book.service';
 import { AppComponent } from './app.component';
 
+enableProdMode();
 
 @NgModule({
 	declarations: [
@@ -18,14 +19,17 @@ import { AppComponent } from './app.component';
 		BrowserModule,
 		BrowserAnimationsModule,
 		FormsModule,
+		MatCardModule,
 		HttpClientModule,
 		MatButtonModule,
 		MatCheckboxModule,
+
 	],
 	providers: [
 		BookService
 	],
 	bootstrap: [AppComponent],
     schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+
 })
 export class AppModule { }
