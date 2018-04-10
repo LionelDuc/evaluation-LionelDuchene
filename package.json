@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "ng build --prod --env=test --base-href /eval/"
+    "build": "ng build --prod --env=test --base-href /evaluation-LionelDuchene/",
+    "deploy": "ngh --repo=git@github.com:LionelDuc/evaluation-LionelDuchene.git",
+    "publish": "npm run build && npm run deploy"
   },
   "private": true,
   "dependencies": {
